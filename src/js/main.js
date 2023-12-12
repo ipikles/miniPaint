@@ -24,6 +24,9 @@ import File_open_class from './modules/file/open.js';
 import File_save_class from './modules/file/save.js';
 import * as Actions from './actions/index.js';
 
+// Custom
+import bluePlanSetup from './blueplan.js';
+
 window.addEventListener('load', function (e) {
 	// Initiate app
 	var Layers = new Base_layers_class();
@@ -54,4 +57,5 @@ window.addEventListener('load', function (e) {
 	// Render all
 	GUI.init();
 	Layers.init();
+	bluePlanSetup();
 }, false);
