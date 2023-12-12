@@ -14,6 +14,7 @@ export default function bluePlanSetup() {
     const fileId = Number(command.substring(6));
     const url = `/attachments/${fileId}`;
     window.FileOpen.file_open_url_handler({ url: url });
+    window.BP_IMAGE_ID = fileId;
   }
 }
 
