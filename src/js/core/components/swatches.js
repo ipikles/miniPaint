@@ -116,10 +116,12 @@
 				swatchGroup.classList.add('rows_' + rows);
 
 				const swatches = [];
+				const defaultColors = ['#ffffff', '#FFD800', '#FF0000', '#000000', '#4CFF00', '#0026FF', '#00f6ff'];
 				for (let i = 0; i < count; i++) {
 					const swatch = document.createElement('div');
+					const hex = defaultColors[i] || '#ffffff'
 					swatch.classList.add('swatch');
-					$(swatch).data('hex', '#ffffff');
+					$(swatch).data('hex', hex).css('background-color', hex);
 					swatches.push(swatch);
 					swatchGroup.appendChild(swatch);
 					if (i === selectedIndex && !readonly) {
